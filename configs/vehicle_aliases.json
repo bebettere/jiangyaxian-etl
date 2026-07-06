@@ -1,0 +1,137 @@
+{
+  "brands": [
+    {
+      "std": "Toyota",
+      "aliases": ["丰田", "トヨタ"],
+      "models": [
+        {"std": "Prius", "aliases": ["普锐斯", "プリウス"], "generations": [{"name": "XW50", "start": 2016, "end": 2022}]},
+        {"std": "Camry", "aliases": ["凯美瑞"], "generations": [{"name": "XV70", "start": 2018, "end": 2024}]},
+        {"std": "Corolla", "aliases": ["卡罗拉", "花冠"]},
+        {"std": "RAV4", "aliases": ["荣放", "RAV 4"]},
+        {"std": "Highlander", "aliases": ["汉兰达"]}
+      ]
+    },
+    {
+      "std": "Honda",
+      "aliases": ["本田", "ホンダ"],
+      "models": [
+        {"std": "Civic", "aliases": ["思域"]},
+        {"std": "Accord", "aliases": ["雅阁"]},
+        {"std": "CR-V", "aliases": ["CRV", "本田CRV"]},
+        {"std": "Fit", "aliases": ["飞度", "Jazz"]},
+        {"std": "Odyssey", "aliases": ["奥德赛"]}
+      ]
+    },
+    {
+      "std": "Nissan",
+      "aliases": ["日产", "尼桑", "日産"],
+      "models": [
+        {"std": "Altima", "aliases": ["天籁"]},
+        {"std": "Sentra", "aliases": ["轩逸"]},
+        {"std": "Rogue", "aliases": ["奇骏", "X-Trail"]},
+        {"std": "Leaf", "aliases": ["聆风"]},
+        {"std": "Versa", "aliases": ["阳光"]}
+      ]
+    },
+    {
+      "std": "Mazda",
+      "aliases": ["马自达", "マツダ"],
+      "models": [
+        {"std": "Mazda3", "aliases": ["昂克赛拉", "马3"]},
+        {"std": "Mazda6", "aliases": ["阿特兹", "马6"]},
+        {"std": "CX-5", "aliases": ["CX5"]},
+        {"std": "CX-30", "aliases": ["CX30"]}
+      ]
+    },
+    {
+      "std": "Subaru",
+      "aliases": ["斯巴鲁", "スバル"],
+      "models": [
+        {"std": "Forester", "aliases": ["森林人"]},
+        {"std": "Outback", "aliases": ["傲虎"]},
+        {"std": "Impreza", "aliases": ["翼豹"]},
+        {"std": "Crosstrek", "aliases": ["XV"]}
+      ]
+    },
+    {
+      "std": "Ford",
+      "aliases": ["福特"],
+      "models": [
+        {"std": "F-150", "aliases": ["F150"]},
+        {"std": "Focus", "aliases": ["福克斯"]},
+        {"std": "Escape", "aliases": ["翼虎", "Kuga"]},
+        {"std": "Explorer", "aliases": ["探险者"]}
+      ]
+    },
+    {
+      "std": "Chevrolet",
+      "aliases": ["雪佛兰"],
+      "models": [
+        {"std": "Silverado", "aliases": ["索罗德"]},
+        {"std": "Equinox", "aliases": ["探界者"]},
+        {"std": "Malibu", "aliases": ["迈锐宝"]},
+        {"std": "Bolt", "aliases": ["Bolt EV"]}
+      ]
+    },
+    {
+      "std": "Volkswagen",
+      "aliases": ["大众", "VW"],
+      "models": [
+        {"std": "Golf", "aliases": ["高尔夫"]},
+        {"std": "Passat", "aliases": ["帕萨特"]},
+        {"std": "Jetta", "aliases": ["捷达", "速腾"]},
+        {"std": "Tiguan", "aliases": ["途观"]}
+      ]
+    },
+    {
+      "std": "BMW",
+      "aliases": ["宝马"],
+      "models": [
+        {"std": "3 Series", "aliases": ["3系", "三系"]},
+        {"std": "5 Series", "aliases": ["5系", "五系"]},
+        {"std": "X3", "aliases": ["宝马X3"]},
+        {"std": "X5", "aliases": ["宝马X5"]}
+      ]
+    },
+    {
+      "std": "Mercedes-Benz",
+      "aliases": ["奔驰", "Mercedes", "Benz"],
+      "models": [
+        {"std": "C-Class", "aliases": ["C级", "C Class"]},
+        {"std": "E-Class", "aliases": ["E级", "E Class"]},
+        {"std": "GLC", "aliases": ["奔驰GLC"]},
+        {"std": "GLE", "aliases": ["奔驰GLE"]}
+      ]
+    },
+    {
+      "std": "Tesla",
+      "aliases": ["特斯拉"],
+      "models": [
+        {"std": "Model 3", "aliases": ["Model3", "M3"]},
+        {"std": "Model Y", "aliases": ["ModelY", "MY"]},
+        {"std": "Model S", "aliases": ["ModelS"]},
+        {"std": "Model X", "aliases": ["ModelX"]}
+      ]
+    },
+    {
+      "std": "Hyundai",
+      "aliases": ["现代", "현대"],
+      "models": [
+        {"std": "Elantra", "aliases": ["伊兰特"]},
+        {"std": "Sonata", "aliases": ["索纳塔"]},
+        {"std": "Tucson", "aliases": ["途胜"]},
+        {"std": "Santa Fe", "aliases": ["胜达"]}
+      ]
+    },
+    {
+      "std": "Kia",
+      "aliases": ["起亚", "기아"],
+      "models": [
+        {"std": "Sportage", "aliases": ["狮铂拓界"]},
+        {"std": "Sorento", "aliases": ["索兰托"]},
+        {"std": "K5", "aliases": ["Optima"]},
+        {"std": "Telluride", "aliases": ["特柳赖德"]}
+      ]
+    }
+  ]
+}
