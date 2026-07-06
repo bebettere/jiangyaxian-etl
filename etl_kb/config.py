@@ -19,13 +19,11 @@ class Settings:
     feishu_table_app_token: str | None
     feishu_table_id: str | None
     feishu_chat_id: str | None
-    glm_api_key: str | None
-    relay_api_key: str | None
-    relay_base_url: str | None
-    glm_chat_model: str
-    glm_vision_model: str
-    glm_embedding_model: str
-    relay_vision_model: str
+    openai_api_key: str | None
+    openai_base_url: str | None
+    openai_chat_model: str
+    openai_vision_model: str
+    openai_embedding_model: str
     database_path: Path
     image_dir: Path
 
@@ -38,13 +36,11 @@ class Settings:
             feishu_table_app_token=os.getenv("FEISHU_TABLE_APP_TOKEN"),
             feishu_table_id=os.getenv("FEISHU_TABLE_ID"),
             feishu_chat_id=os.getenv("FEISHU_CHAT_ID"),
-            glm_api_key=os.getenv("GLM_API_KEY"),
-            relay_api_key=os.getenv("RELAY_API_KEY"),
-            relay_base_url=os.getenv("RELAY_BASE_URL"),
-            glm_chat_model=os.getenv("GLM_CHAT_MODEL", "glm-4.5"),
-            glm_vision_model=os.getenv("GLM_VISION_MODEL", "glm-4.5v"),
-            glm_embedding_model=os.getenv("GLM_EMBEDDING_MODEL", "embedding-3"),
-            relay_vision_model=os.getenv("RELAY_VISION_MODEL", "gpt-4o-mini"),
+            openai_api_key=os.getenv("OPENAI_API_KEY"),
+            openai_base_url=os.getenv("OPENAI_BASE_URL"),
+            openai_chat_model=os.getenv("OPENAI_CHAT_MODEL", "gpt-5.4"),
+            openai_vision_model=os.getenv("OPENAI_VISION_MODEL", "gpt-5.4"),
+            openai_embedding_model=os.getenv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-small"),
             database_path=Path(os.getenv("DATABASE_PATH", "data/knowledge.db")),
             image_dir=Path(os.getenv("IMAGE_DIR", "data/images")),
         )

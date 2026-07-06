@@ -16,13 +16,11 @@ def build_pipeline(settings: Settings, mock: bool) -> ETLPipeline:
     if settings.feishu_app_id and settings.feishu_app_secret:
         feishu = FeishuClient(settings.feishu_app_id, settings.feishu_app_secret)
     llm = LLMClient(
-        glm_api_key=settings.glm_api_key,
-        glm_chat_model=settings.glm_chat_model,
-        glm_vision_model=settings.glm_vision_model,
-        glm_embedding_model=settings.glm_embedding_model,
-        relay_api_key=settings.relay_api_key,
-        relay_base_url=settings.relay_base_url,
-        relay_vision_model=settings.relay_vision_model,
+        openai_api_key=settings.openai_api_key,
+        openai_base_url=settings.openai_base_url,
+        openai_chat_model=settings.openai_chat_model,
+        openai_vision_model=settings.openai_vision_model,
+        openai_embedding_model=settings.openai_embedding_model,
     )
     normalizer = VehicleNormalizer.from_file(Path("configs/vehicle_aliases.json"))
     store = KnowledgeStore(settings.database_path)
