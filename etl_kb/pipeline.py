@@ -54,6 +54,14 @@ class ETLPipeline:
 
     def run_chat(self, chat_id: str | None = None, start_time: int | None = None, end_time: int | None = None) -> int:
         messages = self._mock_chat_messages() if self.mock else self._fetch_chat_messages(chat_id, start_time, end_time)
+        return self._process_chat_messages(messages)
+
+    def run_chat_from_messages(self, messages: list[ChatMessage]) -> int:
+        """Process chat messages already collected elsewhere (e.g. exported by a bot with
+        its own group-chat access), skipping the Feishu Open API fetch step entirely."""
+        return self._process_chat_messages(messages)
+
+    def _process_chat_messages(self, messages: list[ChatMessage]) -> int:
         fragments = segment_chat_messages(messages)
         count = 0
         for fragment in fragments:
