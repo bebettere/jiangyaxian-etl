@@ -23,7 +23,7 @@ TOPIC_KEYWORDS = {
 
 def segment_chat_messages(
     messages: list[ChatMessage],
-    window_minutes: int = 45,
+    window_minutes: int = 240,
     min_topic_score: int = 1,
 ) -> list[CaseFragment]:
     if not messages:
@@ -60,7 +60,9 @@ def _is_related(current: list[ChatMessage], message: ChatMessage) -> bool:
 
 
 def _to_fragment(messages: list[ChatMessage]) -> CaseFragment:
-    text = "\n".join(f"{item.message_id}: {_message_text(item)}" for item in messages if _message_text(item))
+    text = "\n".join(
+        f"[{_speaker_label(item)}] {_message_text(item)}" for item in messages if _message_text(item)
+    )
     image_tokens: list[str] = []
     for message in messages:
         image_tokens.extend(_image_tokens(message))
@@ -92,6 +94,13 @@ def _message_text(message: ChatMessage) -> str:
     if "title" in content:
         return str(content["title"])
     return str(content) if message.msg_type == "text" else ""
+
+
+def _speaker_label(message: ChatMessage) -> str:
+    sender = message.raw.get("sender") if isinstance(message.raw, dict) else None
+    if isinstance(sender, dict) and sender.get("name"):
+        return str(sender["name"])
+    return message.sender_id or "unknown"
 
 
 def _image_tokens(message: ChatMessage) -> list[str]:

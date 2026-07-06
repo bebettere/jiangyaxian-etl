@@ -54,6 +54,10 @@ class LLMClient:
         images = "\n".join(image_descriptions or [])
         prompt = f"""
 你是行车记录仪降压线安装知识库的结构化抽取器。
+输入的文本每行前面用[发言人]标注了说话人，同一时间窗口内可能混入了不同客户、不同车型的对话。
+请先判断这段文本是否只涉及同一个客户、同一辆车；如果明显混入了多个不同客户或车型的内容，
+或者你无法确定连接说明具体对应哪辆车，quality_status 必须填"高风险勿自动回复"。
+
 请从输入中抽取 JSON，字段必须是：
 brand, model, year, connection_description, quality_status, source_tags。
 quality_status 只能取：未清洗、AI已解析、高风险勿自动回复。
